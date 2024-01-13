@@ -1,0 +1,73 @@
+.header{
+    width: 100%;
+    background-color: #131921;
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+    max-height: 100px;
+}
+
+.headerImage span{
+    color:aliceblue;
+    font-size: 30px;
+}
+
+
+.comboBox select{
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: solid;
+    border-color: whitesmoke;
+    background-color: #131921;
+    color: whitesmoke;
+}
+
+.searchBox{
+    width: 30%;
+}
+
+.searchBox input{
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.iconos{
+    flex-direction: row;
+    display: flex;
+    height: 100%;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.iconos button{
+    border-color: antiquewhite;
+    width: 50px;
+    height: 50px;
+    border-width: 2px;
+    border-radius: 40px;
+}
+
+.iconos button:hover{
+    background-color:thistle;
+}
+
+.avatar{
+  width: 30px;
+  height: 30px;
+  margin: 0 auto;
+}
+
+.shopCart{
+    width: 28px;
+    height: 28px;
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 959px){
+    .comboBox{
+        display: none;
+    }
+}
