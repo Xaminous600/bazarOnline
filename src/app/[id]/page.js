@@ -1,13 +1,17 @@
+'use client'
+
 import products from '../data/products.json'
 import Link from 'next/link';
+import { useCart } from '../hooks/useCart';
+import { useEffect, useState } from 'react';
 
 export default function ProductId({params}){
     const {id} = params;
-    
+    const {addToCart} = useCart();
     const product = products.products.find(item => item.id.toString() === id);
 
     let valorOriginal = product.price / (1-(product.discountPercentage / 100));
-    
+
     return(
         <div class='flex w-auto mt-2 flex-col items-center shadow-2xl rounded-lg mx-32'>
             <p class='font-extralight'> 
@@ -64,8 +68,8 @@ export default function ProductId({params}){
                         <p class='font-serif italic'>{product.description}</p>
                         <div class="flex space-x-2 mb-4 text-sm font-medium relative ">
                             <div class="flex space-x-4 bottom-0 mt-5">
-                                <Link href={'/' + product.id}>
-                                    <button class="h-10 px-6 font-semibold rounded-md bg-black text-white">
+                                <Link href={'/shopcart'}>
+                                    <button class="h-10 px-6 font-semibold rounded-md bg-black text-white" onClick={()=>{addToCart(product)}}>
                                         Buy now
                                     </button>
                                 </Link>

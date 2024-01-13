@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
           <CartProvider>
             <Header />
             {children}
-            <Footer />
+            {/*<Footer />*/}
           </CartProvider>
         </FilterProvider>
       </body>
